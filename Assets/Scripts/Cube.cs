@@ -9,12 +9,13 @@ public class Cube : Shape {
         name = gameObject.name;
     }
 
-    protected override string ShowText() {
-        return "This is the cool " + name;
+    protected override void ShowText() {  // Полиморфизм
+        GameManager.instance.ChangeShowText("This is cool" + name);
     }
 
     protected override void OnMouseDown() {
         GetComponent<Renderer>().material.color = Color.green;
+        ShowText();
     }
 
 }

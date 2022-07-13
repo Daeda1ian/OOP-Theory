@@ -9,12 +9,13 @@ public class Sphere : Shape {
         name = "ball";
     }
 
-    protected override string ShowText() {
-        return "This is the best " + name;
+    protected override void ShowText() {
+        GameManager.instance.ChangeShowText("This is " + name);
     }
 
     protected override void OnMouseDown() {
         GetComponent<Renderer>().material.color = Color.yellow;
+        ShowText();
     }
 
 }

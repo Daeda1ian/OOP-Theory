@@ -16,8 +16,8 @@ public abstract class Shape : MonoBehaviour {  // Наследование / Абстракция в ви
         rb = GetComponent<Rigidbody>();
     }
 
-    protected virtual string ShowText () {  // Полиморфизм
-        return "This is " + name;
+    protected virtual void ShowText () {  // Полиморфизм
+        
     }
 
     protected abstract void OnMouseDown();

@@ -8,11 +8,12 @@ public class Capsule : Shape {
         name = gameObject.name + " 3000";
     }
 
-    protected override string ShowText() {
-        return "This is the " + name;
+    protected override void ShowText() {
+        GameManager.instance.ChangeShowText("This is the " + name);
     }
 
     protected override void OnMouseDown() {
         GetComponent<Renderer>().material.color = Color.red;
+        ShowText();
     }
 }

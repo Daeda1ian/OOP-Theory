@@ -9,7 +9,7 @@ public class Cube : Shape {
         name = gameObject.name;
     }
 
-    protected override void ShowText() {  // Полиморфизм
+    protected override void ShowText() {  
         GameManager.instance.ChangeShowText("This is cool" + name);
     }
 
